@@ -10,13 +10,10 @@ def encrypt(p,key):
     for i in p:
         if not i==' ':
             index=l.find(i)
-            if index ==-1:
-                c+=i
-            else:
-                n=index+key
-                if n>=num:
-                    n-=num
-                c+=l[n]
+            n=index+key
+            if n>=num:
+                n-=num
+            c+=l[n]
     print(c)
 
 def decrypt(c,key):
@@ -24,13 +21,10 @@ def decrypt(c,key):
     for i in c:
         if not i==' ':
             index=l.find(i)
-            if index ==-1:
-                p+=i
-            else:
-                n=index-key
-                if n<0:
-                    n+=num
-                p+=l[n]
+            n=index-key
+            if n<0:
+                n+=num
+            p+=l[n]
     print(p)
 
 
@@ -48,6 +42,9 @@ def Menu():
             password=input("Enter Password to decrypt: ")
             key=int(input("Enter shift key: "))
             decrypt(password,key)
+        elif x==3:
+            print("Bye Bye")
+            break
         else:
             break
 
