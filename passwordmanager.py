@@ -114,4 +114,3 @@ class PasswordManager:
 
 passman = PasswordManager()
 passman.menu()
-
